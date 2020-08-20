@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/mar_120"
+    android:layout_height="@dimen/mar_120"
+    android:background="@drawable/shape_daojiao_5_darkgray_all"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/mar_10">
+
+    <ProgressBar
+        android:layout_width="@dimen/mar_36"
+        android:layout_height="@dimen/mar_36"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/dialog_loading" />
+
+    <TextView
+        android:id="@+id/id_tv_loadingmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_20"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"
+        android:layout_gravity="center"
+        android:text="正在加载"/>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+
+    <color name="blue">#33a3ec</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <!--分割线颜色-->
+    <color name="linecolor">#E7EAF2</color>
+    <!--字体颜色-->
+    <color name="textcolor">#333333</color>
+    <!--二级字体颜色-->
+    <color name="heading">#555555</color>
+    <!--三级字体颜色-->
+    <color name="subhead">#888888</color>
+
+    <color name="red">#FF3C3C</color>
+
+    <color name="orange">#FD9406</color>
+
+    <color name="background">#F5F5F5</color>
+    <color name="tran7_color">#77000000</color>
+</resources>

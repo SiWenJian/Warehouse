@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_45"
+            android:layout_marginRight="@dimen/mar_40"
+            android:layout_marginLeft="@dimen/mar_40"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="账号"
+                android:textColor="@color/heading"
+                android:textSize="@dimen/text_14"/>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入帐号"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/textcolor"
+                android:layout_marginLeft="@dimen/mar_10"
+                android:textCursorDrawable="@null"
+                android:singleLine="true"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_1"
+            android:layout_marginLeft="@dimen/mar_40"
+            android:layout_marginRight="@dimen/mar_40"
+            android:background="@color/linecolor"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_45"
+            android:layout_marginRight="@dimen/mar_40"
+            android:layout_marginLeft="@dimen/mar_40"
+            android:layout_marginTop="@dimen/mar_10">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/heading"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/text_14"
+                android:inputType="textPassword"
+                android:layout_marginLeft="@dimen/mar_10"
+                android:textCursorDrawable="@null"
+                android:singleLine="true"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_1"
+            android:layout_marginLeft="@dimen/mar_40"
+            android:layout_marginRight="@dimen/mar_40"
+            android:background="@color/linecolor"/>
+
+        <Button
+            android:id="@+id/login"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mar_35"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/mar_50"
+            android:layout_marginTop="@dimen/mar_60"
+            android:layout_marginRight="@dimen/mar_50"
+            android:background="@drawable/bg_button"
+            android:text="登 录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

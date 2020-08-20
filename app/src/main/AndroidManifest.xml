@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pmcc.warehouse">
+
+    <!--获取设备网络状态，禁用后无法获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--网络权限，当禁用后，无法进行检索等相关业务-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--读取设备硬件信息，统计数据-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--读取系统信息，包含系统版本等信息，用作统计-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!--/获取设备的网络状态，鉴权所需网络代理-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许sd卡写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--自动安装的权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".activity.CommodityActivity"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.pmcc.warehouse.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <service
+            android:name=".DownloadAppService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.android.threadsample.BROADCAST" />
+            </intent-filter>
+        </service>
+
+        <!--统计报表-->
+        <activity android:name=".activity.DataReportActivity"/>
+
+        <!--机电专业配件资金支出情况统计月报-->
+        <activity android:name=".activity.JidianExpendActivity"/>
+        <!--机电专业配件入库统计月报-->
+        <activity android:name=".activity.JidianIncomeActivity"/>
+        <!--物资到货统计表-->
+        <activity android:name=".activity.MaterialActivity"/>
+        <!--机电专业配件使用情况统计月报-->
+        <activity android:name=".activity.JidianUseActivity"/>
+        <!--机电专业配件领用情况统计月报-->
+        <activity android:name=".activity.JidianCollectActivity"/>
+    </application>
+
+</manifest>
